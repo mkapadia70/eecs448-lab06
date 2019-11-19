@@ -1,0 +1,7 @@
+1.  When I enqueued twice, and dequeued once, then peeked the top of the queue, it returned the incorrect top of the queue.
+2. Enqueued twice, peeked the top and it returned the incorrect value.
+     1 & 2 a.   This can mean there is something wrong with the enqueuing. It may be acting like a stack when it adds a new value to the front instead of the back.
+     1 & 2 b.   However, This can also mean the peekfront may be peeking the back, not the front
+3. Dequeue removing from the front of queue instead of the back (this may be also because peekfront is peeking the back maybe)
+4. In the Queue.h file, in the comments it says the Dequeue returns "The value of the entry at the front of the queue." However, the Dequeue funciton is a "void," voids cannot return an int that is the value of the entry.
+5. Ran valgrind, and it said: "definitely lost: 48 bytes in 3 blocks (included screenshot)"
